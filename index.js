@@ -86,3 +86,7 @@ function placeOrder(cardNumber) {
     }
 }
 
+addToCart("pumpkin");
+viewCart();
+addToCart("apples");
+viewCart();
