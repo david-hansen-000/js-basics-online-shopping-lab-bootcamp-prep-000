@@ -27,23 +27,20 @@ log("obj",myobj);
 }
 
 function viewCart() {
- var result="In your cart, you have ";
- if (cart.lenth>0) {
-  for (var i=0; i<cart.length; i++) {
-    result=result+cart[i].itemName+" at $"+car[i].itemPrice;
-    if (cart.length>1) {
-      if (i<cart.length-1) {
-        result=result+", ";
-      } else if (i===cart.length-1) {
-        result=result+", and ";
+  var result="In your cart, you have ";
+  if (cart.length<1) {
+    result="Your shopping cart is empty.";
+  } else {
+    for (var i=0; i<cart.length; i++) {
+      result = result + cart[0].itemName + " at $"+cart[0].itemPrice;
+      if (i===(cart.length-1)) {
+        result = result + ".";
+      } else {
+        result = result +", ";
       }
     }
-    result=result+".";
   }
- } else if (cart.length<1){
-   result="Your shopping cart is empty.";
- } 
- return result;
+  return result;
 }
 
 function total() {
@@ -86,7 +83,8 @@ function placeOrder(cardNumber) {
     }
 }
 
+log("empty cart",viewCart());
 addToCart("pumpkin");
-log("cart",viewCart());
+log("cart with 1",viewCart());
 addToCart("apples");
-log("cart",viewCart());
+log("cart with 2",viewCart());
