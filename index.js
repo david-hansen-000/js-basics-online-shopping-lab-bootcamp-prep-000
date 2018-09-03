@@ -28,20 +28,22 @@ log("obj",myobj);
 
 function viewCart() {
  var result="In your cart, you have ";
- if (cart.lenth>0) {
-  for (var i=0; i<array.length; i++) {
+ if (cart.lenth>1) {
+  for (var i=0; i<cart.length; i++) {
     result=result+cart[i].itemName+" at $"+car[i].itemPrice;
-    if (array.length>1) {
-      if (i<array.length-1) {
+    if (cart.length>1) {
+      if (i<cart.length-1) {
         result=result+", ";
-      } else if (i===array.length-1) {
+      } else if (i===cart.length-1) {
         result=result+", and ";
       }
     }
     result=result+".";
   }
- } else {
+ } else if (cart.length<1){
    result="Your shopping cart is empty.";
+ } else if (cart.lenth===1) {
+   result = "In your cart, you have "+cart[0].itemName+" at $"+cart[0].itemPrice+".";
  }
  return result;
 }
@@ -55,9 +57,12 @@ function total() {
 }
 
 function removeFromCart(item) {
+  log("item", item);
     var result=false;
     var num=0;
     for (var i=0; i<cart.length; i++) {
+      log("i", i);
+      log("cart["+i+"]", cart[i].itemName);
       if (item === cart[i].itemName) {
         result=true;
         num=i;
@@ -83,4 +88,3 @@ function placeOrder(cardNumber) {
     }
 }
 
-addToCart("pumpkin");
