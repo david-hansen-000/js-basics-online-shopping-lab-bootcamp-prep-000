@@ -87,6 +87,6 @@ function placeOrder(cardNumber) {
 }
 
 addToCart("pumpkin");
-viewCart();
+log("cart",viewCart());
 addToCart("apples");
-viewCart();
+log("cart",viewCart());
