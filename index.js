@@ -11,8 +11,8 @@ function setCart(c) {
 
 function addToCart(item) {
   var obj={
-    itemName:item,
-    itemPrice:Math.floor(Math.random()*100)
+    "itemName":item,
+    "itemPrice":Math.floor(Math.random()*100)
   };
   cart.push(obj);
   return obj[itemName] + " has been added to your cart."; 
@@ -64,7 +64,7 @@ function removeFromCart(item) {
 }
 
 function placeOrder(cardNumber) {
-    if (cardNumber === nil || cardNumber === 0) {
+    if (cardNumber === null || cardNumber === 0) {
       return "Sorry, we don't have a credit card on file for you.";
     } else {
       var t=total();
