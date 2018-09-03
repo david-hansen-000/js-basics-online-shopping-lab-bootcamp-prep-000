@@ -88,3 +88,5 @@ addToCart("pumpkin");
 log("cart with 1",viewCart());
 addToCart("apples");
 log("cart with 2",viewCart());
+addToCart("staples");
+log("cart with 3",viewCart());
