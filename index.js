@@ -55,11 +55,19 @@ function removeFromCart(item) {
         num=i;
       }
       if (result) {
-        
+        delete car[num].item;
+        return cart;
+      } else {
+        return "That item is not in your cart.";
       }
     }
 }
 
 function placeOrder(cardNumber) {
-  // write your code here
+    if (cardNumber === nil || cardNumber === 0) {
+      return "Sorry, we don't have a credit card on file for you.";
+    } else {
+      var t=total();
+      return "Your total cost is $"+t+", which will be charged to the card "+cardNumber+".";
+    }
 }
