@@ -28,7 +28,7 @@ log("obj",myobj);
 
 function viewCart() {
  var result="In your cart, you have ";
- if (cart.lenth>1) {
+ if (cart.lenth>0) {
   for (var i=0; i<cart.length; i++) {
     result=result+cart[i].itemName+" at $"+car[i].itemPrice;
     if (cart.length>1) {
@@ -42,9 +42,7 @@ function viewCart() {
   }
  } else if (cart.length<1){
    result="Your shopping cart is empty.";
- } else if (cart.lenth===1) {
-   result = "In your cart, you have "+cart[0].itemName+" at $"+cart[0].itemPrice+".";
- }
+ } 
  return result;
 }
 
