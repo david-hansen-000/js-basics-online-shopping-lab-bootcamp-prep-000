@@ -33,7 +33,7 @@ function viewCart() {
     result=result+".";
   }
  } else {
-   result="Your cart is empty.";
+   result="Your shopping cart is empty.";
  }
  return result;
 }
