@@ -18,6 +18,7 @@ function addToCart(item) {
   itemName : item,
   itemPrice : Math.floor(Math.random()*100)
 };
+log(obj);
   log("itemName",obj.itemName);
   log("itemPrice",obj.itemPrice);
   cart.push(obj);
