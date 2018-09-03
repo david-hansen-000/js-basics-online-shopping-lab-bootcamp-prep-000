@@ -47,7 +47,17 @@ function total() {
 }
 
 function removeFromCart(item) {
-    
+    var result=false;
+    var num=0;
+    for (var i=0; i<cart.length; i++) {
+      if (item === cart[i].itemName) {
+        result=true;
+        num=i;
+      }
+      if (result) {
+        
+      }
+    }
 }
 
 function placeOrder(cardNumber) {
