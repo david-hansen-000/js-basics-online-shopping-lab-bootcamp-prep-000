@@ -14,14 +14,14 @@ function setCart(c) {
 }
 
 function addToCart(item) {
-  var obj={};
-  obj[itemName]=item;
-  obj[itemPrice]=Math.floor(Math.random()*100);
-log(obj);
-  log("itemName",obj.itemName);
-  log("itemPrice",obj.itemPrice);
-  cart.push(obj);
-  return obj[itemName] + " has been added to your cart."; 
+  var myobj={};
+  myobj[itemName]=item;
+  myobj[itemPrice]=Math.floor(Math.random()*100);
+log("obj",myobj);
+  log("itemName",myobj.itemName);
+  log("itemPrice",myobj.itemPrice);
+  cart.push(myobj);
+  return myobj[itemName] + " has been added to your cart."; 
 }
 
 function viewCart() {
