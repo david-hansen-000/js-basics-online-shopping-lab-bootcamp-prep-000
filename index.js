@@ -4,6 +4,10 @@ function getCart() {
  return cart;
 }
 
+function log(description, message) {
+  console.log(description+":"+message);
+}
+
 function setCart(c) {
   cart = c;
   return cart;
@@ -14,6 +18,8 @@ function addToCart(item) {
     "itemName":item,
     "itemPrice":Math.floor(Math.random()*100)
   };
+  log("itemName",obj.itemName);
+  log("itemPrice",obj.itemPrice);
   cart.push(obj);
   return obj[itemName] + " has been added to your cart."; 
 }
