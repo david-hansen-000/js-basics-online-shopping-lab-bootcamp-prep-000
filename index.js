@@ -19,9 +19,6 @@ function addToCart(item) {
   var itemPrice="itemPrice";
   myobj[itemName]=item;
   myobj[itemPrice]=Math.floor(Math.random()*100);
-log("obj",myobj);
-  log("itemName",myobj.itemName);
-  log("itemPrice",myobj.itemPrice);
   cart.push(myobj);
   return myobj[itemName] + " has been added to your cart."; 
 }
@@ -32,7 +29,7 @@ function viewCart() {
     result="Your shopping cart is empty.";
   } else {
     for (var i=0; i<cart.length; i++) {
-      result = result + cart[0].itemName + " at $"+cart[0].itemPrice;
+      result = result + cart[i].itemName + " at $"+cart[i].itemPrice;
       if (i===(cart.length-1)) {
         result = result + ".";
       } else {
