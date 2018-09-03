@@ -35,6 +35,9 @@ function viewCart() {
       } else {
         result = result +", ";
       }
+      if (i === (cart.length-2)) {
+        result = result + "and ";
+      }
     }
   }
   return result;
